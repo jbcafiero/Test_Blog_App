@@ -1,0 +1,21 @@
+<div class="">
+  <div class="container" align="center">
+        <h1 style="margin-top: 100px; margin-bottom: 75px;">Users List</h1>
+        <% @user.each do |user| %>
+          <div class="jumbotron" style="margin-top: 50px;">
+            <div class="media-body" style="height: 125px;">
+              <div class="avatar-special">
+                <%= link_to "", profile_path(user.username) %>
+              </div>
+              <p class=""><%= link_to user.username, profile_path(user.username), class: "btn", style: "color: grey; font-size: 20px;" %></p>
+              <p class=""><%= user.user_bio %></p>
+            </div>
+          </div>
+
+        <% end %>
+
+      </div>
+    </div>
+
+  </div>
+</div>

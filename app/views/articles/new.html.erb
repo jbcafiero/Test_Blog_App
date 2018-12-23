@@ -1,0 +1,28 @@
+<div class="container">
+  <div class="form-group">
+    <div class="row">
+        <h1 style="margin-top: 50px; margin-bottom: 25px;">Create New Post</h1>
+    </div>
+    <%= form_for @post do |p| %>
+    <div class="row" style="margin-bottom: 20px;">
+      <%= p.label :title %>
+      <%= p.text_field :title, class: 'form-control' %>
+    </div>
+    <div class="row" style="margin-bottom: 20px;">
+      <%= p.label :description, class: '' %>
+      <%= p.text_area :description, class: 'form-control' %>
+    </div>
+    <div class="row" style="margin-bottom: 20px;">
+      <p>Written By - <%= current_user.username %></p>
+    </div>
+    <div class="row" style="margin-bottom: 50px;">
+        <%= p.submit "Add", class: 'btn btn-primary' %>
+    </div>
+
+    <% end %>
+
+  <%= link_to 'Cancle', articles_path, class: "btn btn-danger margin-none" %>
+
+  </div>
+
+</div>

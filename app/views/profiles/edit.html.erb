@@ -1,0 +1,43 @@
+<% if @canedit == true %>
+<div class="container">
+  <div class="form-group">
+    <div class="row">
+        <h1 style="margin-top: 50px; margin-bottom: 25px;">Edit Profile</h1>
+    </div>
+    <%= form_for @user, url: userupdate_path(params[:username]), html: { method: :patch } do |p| %>
+    <div class="row" style="margin-bottom: 20px;">
+      <%= p.label 'Profile Picture' %>
+      <%= p.file_field :image, class: 'btn btn-default btn-file' %>
+    </div>
+    <div class="row" style="margin-bottom: 20px;">
+      <%= p.label :username %>
+      <%= p.text_field :username, class: 'form-control' %>
+    </div>
+    <div class="row" style="margin-bottom: 20px;">
+      <%= p.label "Bio", class: '' %>
+      <%= p.text_area :user_bio, class: 'form-control', placeholder: "nothing is currently known about you" %>
+    </div>
+    <div class="row" style="margin-bottom: 50px;">
+        <%= p.submit "Update Profile", class: 'btn btn-primary' %>
+    </div>
+
+    <% end %>
+
+  <%= link_to 'Cancle', profiles_path, class: "btn btn-danger margin-none" %>
+
+  </div>
+<% else %>
+
+<div class="container">
+  <div class="row" style="margin-bottom: 25px; margin-top: 50px;">
+    <h1><%= @user.username %></h1>
+  </div>
+  <div class="row" style="margin-left: -20px; margin-top: 50px;">
+      <%= @user.user_bio %>
+  </div>
+  <div class="" style="margin-left: -20px; margin-top: 50px;">
+    <%= link_to 'Back To Profiles', profiles_path, class: "btn btn-danger" %>
+  </div>
+</div>
+
+<% end %>

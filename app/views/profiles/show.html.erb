@@ -1,0 +1,17 @@
+<div class="container align-center">
+  <div class="jumbotron" style="margin-top: 25px;">
+    <div class="" align="center" style="width: auto">
+      <div class="avatar" align="center">
+      </div>
+    </div>
+    <div class="" align="center" style="margin-bottom: 25px; margin-top: 50px; text-align: center; width: inherit;">
+      <h1 align="center"><%= @user.username %></h1>
+    </div>
+    <div class="text-center" align="center" style="margin-left: -20px; margin-top: 50px;">
+        <%= @user.user_bio %>
+    </div>
+    <div class="" style="margin-left: 50px; margin-top: 50px;">
+      <%= link_to 'Back To Profiles', profiles_path, class: "btn btn-danger" %>
+    </div>
+  </div>
+</div>

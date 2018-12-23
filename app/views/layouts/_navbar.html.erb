@@ -1,0 +1,59 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <%= link_to 'Blog App', home_path, class: "navbar-brand" %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+
+        <% if current_user %>
+        <li class="nav-item">
+        <%= link_to 'Listing', articles_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+        <%= link_to 'Users', profiles_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+        <%= link_to 'Feed', '#', class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+        <%= link_to 'Page', '#', class: "nav-link" %>
+        </li>
+
+    </ul>
+        <% else %>
+
+        <% end %>
+
+    <ul class="navbar-nav float-right" style="margin-right: 10px;">
+      <li class="nav-item float-right">
+        <% if current_user %>
+
+        <% else %>
+        <%= link_to "Sign Up ", signup_path, class: 'nav-link show-link' %>
+
+      </li>
+
+      <li class="nav-item float-right">
+        <div class="v1"><p></p> </div>
+      </li>
+        <% end %>
+      <li class="nav-item">
+        <% if current_user %>
+        <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" >
+        <%= current_user.username %>
+        </a>
+        <ul style="" class="dropdown-menu floattoright" aria-labelledby="navbarDropdown" id="#navbarDropdown">
+        <li class="dropdown-item"><%= link_to 'Create Post', articles_new_path, class: 'btn' %></li>
+        <li class="dropdown-item"><%= link_to 'View Profile', profile_path(current_user.username), class: 'btn' %></li>
+        <li class="dropdown-item"><%= link_to 'Edit Profile', profileedit_path(current_user.username), class: 'btn' %></li>
+        <li class="dropdown-item"><%= link_to "Log Out", end_path, method: 'delete', class: 'btn' %></li>
+        </ul>
+        <% else %>
+        <%= link_to "Log In", login_path, class: 'nav-link show-link' %>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</nav>

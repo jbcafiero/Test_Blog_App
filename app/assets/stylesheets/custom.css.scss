@@ -1,0 +1,191 @@
+@import "bootstrap";
+
+.opener {
+
+  background-image: asset_url('nice_mountains.jpg');
+  background-size: cover;
+  height: 1000px;
+  text-align: center;
+
+}
+
+.user_title {
+
+
+
+}
+
+.avatar {
+
+  margin-bottom: 25px;
+  margin-top: 50px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-image: asset_url('no-avatar.png');
+  background-position: center;
+  background-size: cover;
+
+
+
+}
+
+.avatar-special {
+  margin-top: -50px;
+  margin-bottom: 0px;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  overflow: hidden;
+  background-image: asset_url('no-avatar.png');
+  background-position: center;
+  background-size: cover;
+
+
+
+}
+
+.floattoright {
+
+  float: right;
+  margin-left: 90%;
+
+}
+
+.v1 {
+
+  background-color: grey;
+  height: 22px;
+  width: 2px;
+
+}
+
+.right{
+float: right;
+width: 50%;
+ }
+
+.show-link {
+
+  color: grey;
+  font-size: 20px;
+  font-family: Arial;
+
+}
+
+.show-link:hover {
+
+  color: black;
+
+}
+
+.custom-menu {
+
+  width: inherit;
+
+}
+
+.white {
+
+  color: white;
+
+}
+
+.fill-area {
+
+  height: inherit;
+  width: inherit;
+
+
+}
+
+.margin-none {
+
+  margin-left: -15px;
+
+}
+
+.titles {
+
+  margin: -1px;
+  padding: 0;
+  height: inherit;
+  width: 500px;
+  border-style: solid;
+  border-color: lightgrey;
+  border-right-width: 2px;
+  border-left-width: 2px;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+
+
+}
+
+.entry {
+
+  background-color: lightgrey;
+
+}
+
+.lists {
+
+  text-align: center;
+  background-color: red;
+  margin: 0;
+  margin: -1 -1;
+  padding: 0;
+  border: 3px solid grey;
+
+}
+
+.create-bt {
+
+  margin-top: 50px;
+
+}
+
+.float {
+
+  float: none;
+  opacity: 0;
+
+}
+
+.vertical-center {
+
+  padding: 250px 0px;
+
+}
+
+.content {
+
+  width: auto;
+
+}
+
+.center {
+
+  text-align: center;
+
+}
+
+#open-hook {
+
+  font-size: 100px;
+  margin-bottom: 200px;
+  color: black;
+
+}
+
+.btn-xlg {
+
+  height: 75px;
+  width: 200px;
+  font-size: 32px;
+
+}
+
+.btn-xlg.hover {
+
+}
